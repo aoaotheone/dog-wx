@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class='container'>
+  <view bindtap='goActivity' data-activity="{{item}}" wx:for="{{activity}}" wx:key="item.aid" class='activity-item'>
+    <view style='font-size:38rpx;color:#353535;width:100%;padding:36rpx 30rpx;'>{{item.title}}</view>
+    <view class='activity-info'>
+      <view class='info-item'>
+        <view class='info-text mainColor'>时间</view>
+        <text class='info-content'>{{item.time}}</text>
+      </view>
+      <view class='info-item'>
+        <view class='info-text mainColor'>地点</view>
+        <text class='info-content'>{{item.place}}</text>
+      </view>
+      <view class='cf'></view>  
+    </view>
+    <view class='activity-info' style='margin-bottom:120rpx;'>
+      <view class='info-item'>
+        <view class='info-text mainColor'>人数</view>
+        <text class='info-content'>{{item.need_num}}</text>
+      </view>
+      <view class='info-item'>
+        <view class='info-text mainColor'>状态</view>
+        <text class='info-content' style='color:{{item.color}}'>{{item.state}}</text>
+      </view>
+      <view class='cf'></view>  
+    </view>
+    <view wx:if='{{item.status === 0}}' class='sign-bt mainBG'>报名</view>
+    <view wx:else class='sign-bt' style='background-color:#99ebcc'>{{item.state}}</view>
+  </view>
+</view>

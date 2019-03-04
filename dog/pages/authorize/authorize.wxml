@@ -1,0 +1,5 @@
+<!--pages/authorize/authorize.wxml-->
+<view class='container' style='justify-content:center;'>
+  <button class='mainBG' style='color:white;' open-type="getUserInfo"
+    bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+</view>

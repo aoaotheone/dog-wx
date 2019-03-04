@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/activity/activity",
+    "pages/activiting/activiting",
+    "pages/authorize/authorize",
+    "pages/forum/forum",
+    "pages/info/info",
+    "pages/me/me",
+    "pages/myActivity/myActivity",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#f5f5f5",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#009a61",
+    "color": "#a4a4a4",
+    "backgroundColor": "#fefefe",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "pages/img/dog.png",
+        "selectedIconPath": "pages/img/doged.png"
+      },
+      {
+        "pagePath": "pages/forum/forum",
+        "text": "论坛",
+        "iconPath": "pages/img/chat.png",
+        "selectedIconPath": "pages/img/chated.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "pages/img/my.png",
+        "selectedIconPath": "pages/img/my-click.png"
+      }
+    ]
+  }
+
+}

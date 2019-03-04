@@ -1,0 +1,11 @@
+/* pages/myActivity/myActivity.wxss */
+.sign-bt{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 8rpx 8rpx;
+}

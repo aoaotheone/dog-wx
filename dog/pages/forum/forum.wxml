@@ -1,0 +1,4 @@
+<!--pages/forum/forum.wxml-->
+<view class='container'>
+  <text style='margin-top:200rpx;'>程序猿正在努力开发</text>
+</view>

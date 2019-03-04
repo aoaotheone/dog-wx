@@ -1,0 +1,28 @@
+<!--pages/me/me.wxml-->
+<view class='container'>
+  <view wx:if="{{!is_regist}}" class='info'>
+    <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+    <text class='nick'>{{userInfo.nickName}}</text>
+    <text class='welText'>赛北斗欢迎你!</text>
+    <view bindtap='register' class='register'>注册义工信息</view>
+  </view>
+  <view wx:else class='info' style='height:610rpx;'>
+    <image bindtap='register' style='width:114rpx;height:114rpx;position:absolute;top:0;right:0;' src='../img/edit.png'></image>
+    <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+    <text class='nick' style='margin-top:30rpx;'>{{userInfo.nickName}}</text>
+    <view class='time-points'>
+      <view class='time-container' style='border-right: 1rpx solid #f1f1f1'>
+        <text>服务时长</text>
+        <text style='font-size:60rpx;' class='mainColor'>{{time}}</text>
+        <text>分钟</text>
+      </view>
+      <view class='time-container' style='width:48%;'>
+        <text>积分</text>
+        <text style='font-size:60rpx;' class='mainColor'>{{score}}</text>
+        <text>分</text>
+      </view>
+    </view>
+    <view bindtap='showTimeLine' class='me-bottom-bt' style='background-color:#fcd21d;left:0;border-radius: 0px 0px 0px 8px; '>时光轴</view>
+    <view bindtap='showMyAc' class='me-bottom-bt mainBG' style='right:0;border-radius: 0px 0px 8px 0px; '>已报名活动</view>
+  </view>
+</view>

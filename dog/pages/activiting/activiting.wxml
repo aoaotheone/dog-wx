@@ -1,0 +1,28 @@
+<!--pages/activiting/activiting.wxml-->
+<view class='container'>
+  <!-- 顶部背景图 -->
+  <image style='width:100%;height:340rpx;position:fixed;top:0' src='../img/chat.png'></image>
+  <!-- 底部结束按钮 -->
+  <view bindtap='overActivity' class='sign-bt' style='background-color: #e64340;'>结束</view>
+
+  <!-- 活动信息 -->
+  <view class='activity-item' style='margin-top:240rpx;'>
+    <view style='font-size:38rpx;color:#353535;width:100%;text-align:center;margin-top:50rpx;'>{{activity.title}}</view>
+    <view class='activity-info' style='margin-top:20rpx;'>
+      <text class='info-text mainColor' style='float:left;'>时间</text>
+      <text class='info-content' style='float:right;font-size:26rpx;line-height:36rpx;'>{{activity.time}}</text>
+      <view class='cf'></view>
+    </view>
+  
+  </view>
+  <view class='activity-item' style='margin-top:20rpx;'>
+    <view class='activity-info' style='margin-top:20rpx;'>
+      <text class='info-text mainColor'>服务时长</text>
+    </view>
+    <view style='width:100%;display:flex;flex-direction:column;align-items:center;'>
+      <text style='align-self:center;font-size:40rpx;color:#353535;margin-top:40rpx;margin-bottom:200rpx;'><text class='mainColor' style='font-size:60rpx;'>{{time/60|Int}}</text>小时<text class='mainColor' style='font-size:60rpx;'>{{time%60}}</text>分钟</text>
+    </view>
+
+    <image src='../img/clock.png' style='width:200rpx;height:200rpx;position:absolute;bottom:0;letf:0;'></image>
+  </view>
+</view>

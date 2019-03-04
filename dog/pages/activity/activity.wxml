@@ -1,0 +1,54 @@
+<!--pages/activity/activity.wxml-->
+<view class='container'>
+  <!-- 活动内容 -->
+  <view class='activity-item'>
+    <view style='font-size:38rpx;color:#353535;width:100%;padding:36rpx 30rpx;'>{{activity.title}}</view>
+    <view class='activity-info'>
+      <view class='info-item'>
+        <view class='info-text mainColor'>时间</view>
+        <text class='info-content'>{{activity.time}}</text>
+      </view>
+      <view class='info-item'>
+        <view class='info-text mainColor'>地点</view>
+        <text class='info-content'>{{activity.place}}</text>
+      </view>
+      <view class='cf'></view>  
+    </view>
+    <view class='activity-info' style='margin-bottom:20rpx;'>
+      <view class='info-item'>
+        <view class='info-text mainColor'>人数</view>
+        <text class='info-content'>{{activity.need_num}}</text>
+      </view>
+      <view class='info-item'>
+        <view class='info-text mainColor'>状态</view>
+        <text class='info-content' style='color:{{activity.color}}'>{{activity.state}}</text>
+      </view>
+      <view class='cf'></view>  
+    </view>
+  </view>
+  <!-- 活动详情 -->
+  <view class='activity-item'>
+    <view class='activity-info'>
+      <view class='info-text mainColor'>活动简介</view>
+      <view class='activity-detail'>
+        <text wx:if='{{is_folded && need_folded}}' class='floded'>{{folded}}
+          <text class='folded-text'>详情</text>
+        </text>
+        <text wx:if='{{!need_folded}}' class='floded'>{{activity.content}}</text>
+        <text wx:if='{{!is_folded && need_folded}}' class='floded'>{{activity.content}} 
+          <text class='folded-text'> 收起</text>
+        </text>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 底部各种按钮 -->
+  <view wx:if='{{activity.status === 0}}' bindtap='sign' class='sign-bt mainBG'>我要报名</view>
+  <view wx:elif='{{activity.status === 3}}' class='sign-bt'>
+    <view bindtap='startActivity' class='start-bt mainBG'>开始活动</view>
+    <view class='start-bt' bindtap='sign' style='background-color:#888888'>取消报名</view>
+  </view>
+  <view wx:else class='sign-bt' style='background-color:#99ebcc'>{{activity.state}}</view>
+</view>
+

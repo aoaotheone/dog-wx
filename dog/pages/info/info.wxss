@@ -1,0 +1,46 @@
+/* pages/info/info.wxss */
+.pinfo-text{
+  font-size: 28rpx;
+  color: #888888;
+  margin-left: 4%;
+  margin-top: 40rpx;
+  align-self: left;
+}
+.pinfo-input{
+  width: 100%;
+  background-color: #ffffff;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.pinfo-item{
+  width: 96%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 34rpx;
+  color: #000000;
+}
+.pitem-text{
+  width: 140rpx;
+}
+.pitem-input{
+  width: 290rpx;
+  height: 90rpx;
+  border: none;
+  margin-left: 30rpx;
+}
+.get-code{
+  width: 230rpx;
+	height: 60rpx;
+	background-color: #00cc80;
+	border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  text-align: center;
+  line-height: 60rpx;
+}

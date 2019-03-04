@@ -1,0 +1,47 @@
+<!--pages/info/info.wxml-->
+<view class='container'>
+  <text class='pinfo-text'>请输入你的真实姓名和年龄</text>
+  <view class='pinfo-input'>
+    <view class='pinfo-item' style='border-bottom:1rpx #e5e5e5 solid;'>
+      <text class='pitem-text'>姓名<text class='mainColor'>*</text></text>
+      <input wx:if="{{!is_regist}}" bindinput='setInfo' data-info='name' class='pitem-input'>{{info.name}}</input>
+      <text wx:else class='pitem-text'>{{info.name}}</text>
+    </view>
+    <view class='pinfo-item'>
+      <text class='pitem-text'>年龄<text class='mainColor'>*</text></text>
+      <input wx:if="{{!is_regist}}" bindinput='setInfo' data-info='age' class='pitem-input'>{{info.age}}</input>
+      <text wx:else class='pitem-text'>{{info.age}}</text>      
+    </view>
+  </view>
+  <text class='pinfo-text'>请输入注册手机号及收到的验证码</text>
+    <view class='pinfo-input'>
+    <view class='pinfo-item' style='border-bottom:1rpx #e5e5e5 solid;'>
+      <text class='pitem-text'>手机号<text class='mainColor'>*</text></text>
+      <input bindinput='setInfo' data-info='phone_num' class='pitem-input'>{{info.phone_num}}</input>
+      <view wx:if="{{time <=0 }}" bindtap='getcode' class='get-code'>获取验证码</view>
+      <view wx:else class='get-code' style='background-color:#999999;'>{{time}}s后重新发送</view>
+    </view>
+    <view class='pinfo-item'>
+      <text class='pitem-text'>验证码<text class='mainColor'>*</text></text>
+      <input bindinput='setInfo' data-info='phone_code' class='pitem-input'>{{info.phone_code}}</input>
+    </view>
+  </view>
+  <text class='pinfo-text'>拓展信息</text>
+    <view class='pinfo-input'>
+    <view class='pinfo-item' style='border-bottom:1rpx #e5e5e5 solid;'>
+      <text class='pitem-text'>地址</text>
+      <input bindinput='setInfo' data-info='address' class='pitem-input'>{{info.address}}</input>
+    </view>
+    <view class='pinfo-item' style='border-bottom:1rpx #e5e5e5 solid;'>
+      <text class='pitem-text'>从事工作</text>
+      <input bindinput='setInfo' data-info='job' class='pitem-input'>{{info.job}}</input>
+    </view>
+    <view class='pinfo-item'>
+      <text class='pitem-text'>特长</text>
+      <input bindinput='setInfo' data-info='hobby' class='pitem-input'>{{info.hobby}}</input>
+    </view>
+  </view>
+
+  <view wx:if="{{!is_regist}}" bindtap='registerDone' class='sign-bt mainBG'>注册</view>
+   <view wx:else bindtap='change' class='sign-bt mainBG'>修改</view>
+</view>
